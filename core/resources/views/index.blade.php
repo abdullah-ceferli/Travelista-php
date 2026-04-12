@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel </title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/own-bootstrap.css') }}">
+    <link rel="stylesheet" href="{% static 'css/own-bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -617,7 +617,7 @@
             </div>
         </footer>
     </div>
-    <script src="{{ asset('js/script.js') }}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
     <script>
         function lazyLoad() {
             const preloader = document.getElementById('site-preloader')
