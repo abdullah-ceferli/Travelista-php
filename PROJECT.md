@@ -1,18 +1,20 @@
-<!-- Make project -->
-D:\xampp\php\php.exe D:\xampp\php\composer.phar create-project laravel/laravel core    
+# Travelista PHP project
 
-<!-- Migrate the project -->
-D:\xampp\php\php.exe artisan migrate
+The application now lives in the repository root and runs on Laravel 12, PHP 8.3+, and MySQL.
+The existing interface is retained.
 
-<!-- Run the project -->
-D:\xampp\php\php.exe artisan serve
+See [README.md](README.md) for setup, database, email, Google sign-in,
+admin access, and test instructions.
 
-<!-- Make admin panel -->
-D:\xampp\php\php.exe D:\xampp\php\composer.phar require filament/filament:"^3.2" -W
-D:\xampp\php\php.exe artisan filament:install --panels
+From the repository root:
 
-<!-- Createsuperuser -->
-D:\xampp\php\php.exe artisan make:filament-user
+```sh
+composer install
+php artisan migrate
+php artisan storage:link
+php artisan serve
+```
 
-<!-- Clear Panel -->
-D:\xampp\php\php.exe artisan route:clear
+Use the existing `.env` for this installation. The MySQL database is
+`travelista`; migrations define all application tables. Never use
+`migrate:fresh` against a database containing data you want to retain.
